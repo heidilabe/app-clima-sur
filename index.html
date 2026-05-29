@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consulta el estado del clima actual, pronósticos e información meteorológica detallada de Puerto Montt y otras ciudades del sur de Chile.">
+    <title>Clima en Puerto Montt - Información Meteorológica del Sur de Chile</title>
+</head>
+<body>
+
+    <!-- Header principal de la aplicación -->
+    <header id="main-header">
+        <h1>Portal del Clima - Puerto Montt</h1>
+        <p>Tu ventana al tiempo en la Región de Los Lagos y el sur de Chile</p>
+    </header>
+
+    <!-- Navegación principal -->
+    <nav id="main-navigation">
+        <ul>
+            <li><a id="nav-link-home" href="#current-weather">Clima Actual</a></li>
+            <li><a id="nav-link-forecast" href="#forecast-section">Pronóstico Semanal</a></li>
+            <li><a id="nav-link-info" href="#climate-info">Información Climática</a></li>
+            <li><a id="nav-link-contact" href="#contact-section">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main id="main-content">
+
+        <!-- Sección del buscador de ciudades -->
+        <section id="search-section" aria-labelledby="search-heading">
+            <h2 id="search-heading">Buscar Clima en Otra Ciudad</h2>
+            <p>Ingresa el nombre de una ciudad para conocer su información meteorológica en tiempo real.</p>
+            <form id="weather-search-form" action="#" method="GET">
+                <label for="city-search-input">Ciudad:</label>
+                <input 
+                    type="text" 
+                    id="city-search-input" 
+                    name="city" 
+                    placeholder="Ej. Puerto Varas, Castro, Valdivia..." 
+                    required 
+                    aria-required="true"
+                >
+                <button type="submit" id="search-submit-btn">Consultar Clima</button>
+            </form>
+        </section>
+
+        <!-- Sección del clima actual de Puerto Montt -->
+        <section id="current-weather" aria-labelledby="weather-heading">
+            <h2 id="weather-heading">Clima Actual en Puerto Montt</h2>
+            
+            <div id="weather-container">
+                <!-- Información textual del clima -->
+                <div id="weather-details">
+                    <p id="weather-condition"><strong>Condición:</strong> Lluvia Débil / Nublado</p>
+                    <p id="weather-temp"><strong>Temperatura:</strong> 11°C</p>
+                    <p id="weather-feels-like"><strong>Sensación Térmica:</strong> 9°C</p>
+                    <p id="weather-humidity"><strong>Humedad:</strong> 92%</p>
+                    <p id="weather-wind"><strong>Viento:</strong> Oeste a 18 km/h</p>
+                    <p id="weather-update-time"><em>Última actualización: Hace 10 minutos</em></p>
+                </div>
+
+                <!-- Espacio para mostrar el clima actual con imágenes -->
+                <div id="weather-visuals">
+                    <!-- Icono representativo del estado del clima actual -->
+                    <figure id="weather-icon-figure">
+                        <img 
+                            id="weather-icon-img" 
+                            src="images/rainy_icon.png" 
+                            alt="Icono de clima lluvioso y nublado con gotas de agua" 
+                            width="150" 
+                            height="150"
+                        >
+                        <figcaption id="weather-icon-caption">Icono ilustrativo de lluvia débil</figcaption>
+                    </figure>
+
+                    <!-- Imagen del paisaje real del clima en Puerto Montt -->
+                    <figure id="weather-landscape-figure">
+                        <img 
+                            id="weather-landscape-img" 
+                            src="images/puerto_montt_weather.png" 
+                            alt="Vista panorámica de la bahía de Puerto Montt bajo un cielo nublado y lluvioso" 
+                            width="400" 
+                            height="250"
+                        >
+                        <figcaption id="weather-landscape-caption">Bahía de Puerto Montt en un día típico de lluvia</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección con detalles sobre el clima típico de Puerto Montt (Información adicional para enriquecer el contenido) -->
+        <section id="climate-info" aria-labelledby="info-heading">
+            <h2 id="info-heading">Sobre el Clima de Puerto Montt</h2>
+            <p>
+                Puerto Montt cuenta con un clima templado lluvioso o marítimo lluvioso, caracterizado por precipitaciones abundantes durante gran parte del año. A diferencia del norte del país, aquí las lluvias se presentan en todas las estaciones, siendo el invierno la época más lluviosa y con temperaturas más bajas.
+            </p>
+            <article id="climate-features">
+                <h3>Características Principales:</h3>
+                <ul>
+                    <li><strong>Precipitaciones anuales:</strong> Superan los 1.600 mm en promedio.</li>
+                    <li><strong>Temperatura media máxima:</strong> En verano alcanza los 19°C.</li>
+                    <li><strong>Temperatura media mínima:</strong> En invierno ronda los 4°C.</li>
+                </ul>
+            </article>
+        </section>
+
+    </main>
+
+    <!-- Footer / Pie de página de la aplicación -->
+    <footer id="main-footer">
+        <p>&copy; 2026 Portal del Clima Sur. Todos los derechos reservados.</p>
+        <p>Datos meteorológicos proporcionados para fines educativos de la Región de Los Lagos.</p>
+    </footer>
+
+</body>
+</html>
