@@ -3,7 +3,7 @@
  * Permite buscar ciudades del sur de Chile y actualizar el clima de forma dinámica
  */
 
-// Base de datos de simulación para las ciudades del sur de Chile
+// Base de datos de simulación para las ciudades del sur de Chile (incluyendo Pronóstico Semanal)
 const weatherDatabase = {
     "puerto montt": {
         name: "Puerto Montt",
@@ -14,7 +14,16 @@ const weatherDatabase = {
         wind: "Oeste a 18 km/h",
         icon: "images/rainy_icon.png",
         landscape: "images/puerto_montt_weather.png",
-        caption: "Bahía de Puerto Montt en un día típico de lluvia"
+        caption: "Bahía de Puerto Montt en un día típico de lluvia",
+        forecast: [
+            { day: "Lunes", temp: "8°C / 12°C", state: "Lluvia débil", icon: "🌧️" },
+            { day: "Martes", temp: "9°C / 11°C", state: "Lluvia moderada", icon: "🌧️" },
+            { day: "Miércoles", temp: "8°C / 11°C", state: "Nublado", icon: "☁️" },
+            { day: "Jueves", temp: "7°C / 10°C", state: "Llovizna", icon: "🌦️" },
+            { day: "Viernes", temp: "8°C / 12°C", state: "Nublado", icon: "☁️" },
+            { day: "Sábado", temp: "9°C / 13°C", state: "Nublado parcial", icon: "⛅" },
+            { day: "Domingo", temp: "10°C / 13°C", state: "Lluvia débil", icon: "🌧️" }
+        ]
     },
     "puerto varas": {
         name: "Puerto Varas",
@@ -25,7 +34,16 @@ const weatherDatabase = {
         wind: "Sur-Oeste a 12 km/h",
         icon: "images/rainy_icon.png",
         landscape: "images/puerto_montt_weather.png",
-        caption: "Lago Llanquihue con vistas místicas bajo la lluvia de la cuenca"
+        caption: "Lago Llanquihue con vistas místicas bajo la lluvia de la cuenca",
+        forecast: [
+            { day: "Lunes", temp: "7°C / 11°C", state: "Lluvia débil", icon: "🌧️" },
+            { day: "Martes", temp: "8°C / 10°C", state: "Lluvia y neblina", icon: "🌧️" },
+            { day: "Miércoles", temp: "7°C / 10°C", state: "Cubierto", icon: "☁️" },
+            { day: "Jueves", temp: "6°C / 9°C", state: "Llovizna", icon: "🌦️" },
+            { day: "Viernes", temp: "7°C / 11°C", state: "Nublado", icon: "☁️" },
+            { day: "Sábado", temp: "8°C / 12°C", state: "Nublado parcial", icon: "⛅" },
+            { day: "Domingo", temp: "9°C / 12°C", state: "Lluvia débil", icon: "🌧️" }
+        ]
     },
     "castro": {
         name: "Castro",
@@ -36,7 +54,16 @@ const weatherDatabase = {
         wind: "Noroeste a 25 km/h",
         icon: "images/rainy_icon.png",
         landscape: "images/castro_weather.png",
-        caption: "Palafitos de Castro bajo la lluvia intensa de Chiloé"
+        caption: "Palafitos de Castro bajo la lluvia intensa de Chiloé",
+        forecast: [
+            { day: "Lunes", temp: "6°C / 10°C", state: "Lluvia fuerte", icon: "🌧️" },
+            { day: "Martes", temp: "7°C / 9°C", state: "Chubascos", icon: "🌧️" },
+            { day: "Miércoles", temp: "6°C / 9°C", state: "Nublado", icon: "☁️" },
+            { day: "Jueves", temp: "5°C / 8°C", state: "Chubascos", icon: "🌧️" },
+            { day: "Viernes", temp: "6°C / 10°C", state: "Lluvia débil", icon: "🌧️" },
+            { day: "Sábado", temp: "7°C / 11°C", state: "Nublado", icon: "☁️" },
+            { day: "Domingo", temp: "8°C / 11°C", state: "Lluvia fuerte", icon: "🌧️" }
+        ]
     },
     "valdivia": {
         name: "Valdivia",
@@ -47,7 +74,16 @@ const weatherDatabase = {
         wind: "Oeste a 15 km/h",
         icon: "images/rainy_icon.png",
         landscape: "images/puerto_montt_weather.png",
-        caption: "El río Calle-Calle fluyendo bajo un manto lluvioso sureño"
+        caption: "El río Calle-Calle fluyendo bajo un manto lluvioso sureño",
+        forecast: [
+            { day: "Lunes", temp: "7°C / 11°C", state: "Lluvia persistente", icon: "🌧️" },
+            { day: "Martes", temp: "8°C / 10°C", state: "Lluvia", icon: "🌧️" },
+            { day: "Miércoles", temp: "6°C / 11°C", state: "Nublado", icon: "☁️" },
+            { day: "Jueves", temp: "5°C / 9°C", state: "Llovizna", icon: "🌦️" },
+            { day: "Viernes", temp: "6°C / 11°C", state: "Nublado", icon: "☁️" },
+            { day: "Sábado", temp: "7°C / 12°C", state: "Despejado", icon: "☀️" },
+            { day: "Domingo", temp: "8°C / 12°C", state: "Lluvia", icon: "🌧️" }
+        ]
     },
     "osorno": {
         name: "Osorno",
@@ -58,7 +94,16 @@ const weatherDatabase = {
         wind: "Oeste-Noroeste a 14 km/h",
         icon: "images/rainy_icon.png",
         landscape: "images/puerto_montt_weather.png",
-        caption: "Día nublado típico en los verdes campos de la provincia de Osorno"
+        caption: "Día nublado típico en los verdes campos de la provincia de Osorno",
+        forecast: [
+            { day: "Lunes", temp: "6°C / 11°C", state: "Llovizna", icon: "🌦️" },
+            { day: "Martes", temp: "7°C / 10°C", state: "Nublado", icon: "☁️" },
+            { day: "Miércoles", temp: "5°C / 10°C", state: "Cubierto", icon: "☁️" },
+            { day: "Jueves", temp: "4°C / 9°C", state: "Neblina", icon: "🌫️" },
+            { day: "Viernes", temp: "5°C / 11°C", state: "Nublado", icon: "☁️" },
+            { day: "Sábado", temp: "6°C / 12°C", state: "Nublado parcial", icon: "⛅" },
+            { day: "Domingo", temp: "7°C / 11°C", state: "Llovizna", icon: "🌦️" }
+        ]
     },
     "punta arenas": {
         name: "Punta Arenas",
@@ -69,7 +114,16 @@ const weatherDatabase = {
         wind: "Oeste a 45 km/h",
         icon: "images/rainy_icon.png",
         landscape: "images/puerto_montt_weather.png",
-        caption: "El Estrecho de Magallanes azotado por vientos australes extremos"
+        caption: "El Estrecho de Magallanes azotado por vientos australes extremos",
+        forecast: [
+            { day: "Lunes", temp: "0°C / 4°C", state: "Escarcha", icon: "❄️" },
+            { day: "Martes", temp: "-1°C / 3°C", state: "Nieve débil", icon: "❄️" },
+            { day: "Miércoles", temp: "-2°C / 2°C", state: "Nieve", icon: "❄️" },
+            { day: "Jueves", temp: "-1°C / 3°C", state: "Viento fuerte", icon: "💨" },
+            { day: "Viernes", temp: "0°C / 4°C", state: "Nublado", icon: "☁️" },
+            { day: "Sábado", temp: "1°C / 5°C", state: "Chubascos agua-nieve", icon: "🌨️" },
+            { day: "Domingo", temp: "2°C / 5°C", state: "Viento fuerte", icon: "💨" }
+        ]
     }
 };
 
@@ -80,6 +134,26 @@ function normalizeText(text) {
         .toLowerCase()
         .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "");
+}
+
+// Función para renderizar dinámicamente el pronóstico semanal
+function renderWeeklyForecast(forecastList) {
+    const forecastContainer = document.getElementById("forecast-container");
+    if (!forecastContainer) return;
+
+    forecastContainer.innerHTML = ""; // Limpiar contenido previo
+
+    forecastList.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "forecast-card fade-in";
+        card.innerHTML = `
+            <span class="forecast-day">${item.day}</span>
+            <span class="forecast-icon" role="img" aria-label="${item.state}">${item.icon}</span>
+            <span class="forecast-state">${item.state}</span>
+            <span class="forecast-temp">${item.temp}</span>
+        `;
+        forecastContainer.appendChild(card);
+    });
 }
 
 // Escuchar evento DOMContentLoaded para inicializar la lógica
@@ -104,6 +178,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const landscapeImg = document.getElementById("weather-landscape-img");
     const landscapeCaption = document.getElementById("weather-landscape-caption");
 
+    // Inicializar con los datos de Puerto Montt por defecto
+    if (weatherDatabase["puerto montt"]) {
+        renderWeeklyForecast(weatherDatabase["puerto montt"].forecast);
+    }
+
     // Manejar el envío del formulario de búsqueda
     searchForm.addEventListener("submit", (event) => {
         event.preventDefault(); // Evitar recargar la página
@@ -125,7 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Esperar a que termine el fade-out para actualizar datos y hacer fade-in
             setTimeout(() => {
-                // Actualizar Textos
+                // Actualizar Textos del clima actual
                 weatherHeading.textContent = `Clima Actual en ${data.name}`;
                 conditionText.innerHTML = `<strong>Condición:</strong> ${data.condition}`;
                 tempText.innerHTML = `<strong>Temperatura:</strong> ${data.temp}`;
@@ -146,6 +225,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 landscapeImg.src = data.landscape;
                 landscapeImg.alt = data.caption;
                 landscapeCaption.textContent = data.caption;
+
+                // Renderizar también su pronóstico semanal correspondiente de forma dinámica
+                renderWeeklyForecast(data.forecast);
 
                 // Devolver opacidad con clase fade-in
                 weatherContainer.style.opacity = "1";
