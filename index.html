@@ -5,8 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Consulta el estado del clima actual, pronósticos e información meteorológica detallada de Puerto Montt y otras ciudades del sur de Chile.">
     <title>Clima en Puerto Montt - Información Meteorológica del Sur de Chile</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Estilos de la aplicación -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Elementos decorativos de fondo para efecto Glassmorphism -->
+    <div class="bg-blob blob-1" id="decor-blob-1"></div>
+    <div class="bg-blob blob-2" id="decor-blob-2"></div>
+    <div class="bg-blob blob-3" id="decor-blob-3"></div>
 
     <!-- Header principal de la aplicación -->
     <header id="main-header">
@@ -43,6 +53,11 @@
                 >
                 <button type="submit" id="search-submit-btn">Consultar Clima</button>
             </form>
+            <!-- Mensaje de error (oculto inicialmente) -->
+            <div id="search-error" class="error-container hidden" role="alert">
+                <span class="error-icon">⚠️</span>
+                <span id="error-message">Ciudad no encontrada. Intenta con: Puerto Varas, Castro, Valdivia, Osorno o Punta Arenas.</span>
+            </div>
         </section>
 
         <!-- Sección del clima actual de Puerto Montt -->
@@ -113,5 +128,7 @@
         <p>Datos meteorológicos proporcionados para fines educativos de la Región de Los Lagos.</p>
     </footer>
 
+    <!-- Script de lógica e interactividad -->
+    <script src="app.js"></script>
 </body>
 </html>
