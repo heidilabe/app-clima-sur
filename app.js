@@ -73,7 +73,7 @@ const weatherDatabase = {
         humidity: "96%",
         wind: "Oeste a 15 km/h",
         icon: "images/rainy_icon.png",
-        landscape: "images/puerto_montt_weather.png",
+        landscape: "images/valdivia_weather.png",
         caption: "El río Calle-Calle fluyendo bajo un manto lluvioso sureño",
         forecast: [
             { day: "Lunes", temp: "7°C / 11°C", state: "Lluvia persistente", icon: "🌧️" },
