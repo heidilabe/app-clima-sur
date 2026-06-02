@@ -34,6 +34,18 @@ Para el diseño visual premium y los recursos gráficos del clima actual, utiliz
    
 4. **Imagen del Clima de Valdivia:**
    > *"A beautiful landscape view of Valdivia, Chile, showcasing the Calle-Calle river, boats, green riverside forests under a misty, cloudy rain, realistic photography style"*
+   > Registro de Prompts Utilizados Durante el Desarrollo (Interacción con la IA)
+
+Durante el desarrollo de este proyecto, se utilizaron instrucciones (prompts) claras y dirigidas para guiar a la Inteligencia Artificial en la construcción del software, las cuales se detallan a continuación:
+
+* **Prompt 1 (Diseño Visual):** *"Modifica el diseño del contenedor para aplicar un estilo Glassmorphism premium, con bordes finos semi-transparentes, fondo oscuro difuminado y fuentes modernas de Google Fonts."*
+    * **Para qué se usó:** Para estructurar toda la parte visual, los colores y la estética de cristal translúcido en el archivo `css/style.css`.
+* **Prompt 2 (Interactividad del Buscador):** *"Crea un script en app.js que capture el texto del formulario de búsqueda y cambie dinámicamente el título y los datos de clima en la pantalla según la ciudad ingresada, mostrando alertas si no se encuentra."*
+    * **Para qué se usó:** Para programar la lógica del buscador en JavaScript, permitiendo que la página reaccione cuando el usuario escribe una comuna.
+* **Prompt 3 (Datos Locales de Puerto Montt):** *"Abre el archivo app.js y agrega 'Puerto Montt' a la base de datos local de ciudades, con sus respectivos datos de clima (temperatura, condición, humedad, viento) para que cuando la busque en el formulario no me tire error."*
+    * **Para qué se usó:** Para alimentar el sistema con los datos meteorológicos reales de nuestra zona y asegurar que la ciudad principal funcionara perfectamente.
+* **Prompt 4 (Pronóstico Semanal de 7 días):** *"Modifica el archivo app.js e index.html para que la sección de 'Pronóstico Semanal' muestre dinámicamente los datos de toda la semana para Puerto Montt (Lunes a Domingo con sus temperaturas y estados del cielo) usando un diseño de tarjetas."*
+    * **Para qué se usó:** Para construir la sección inferior exigida por la rúbrica, generando la maquetación de los 7 días de la semana con Flexbox.
 
 ## Características Principales
 - **HTML5 Semántico:** Uso de etiquetas estructuradas como `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<figure>` y `<footer>` cumpliendo con la rúbrica del proyecto.
