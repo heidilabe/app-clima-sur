@@ -85,6 +85,7 @@
         <ul>
             <li><a id="nav-link-home" href="#current-weather">Clima Actual</a></li>
             <li><a id="nav-link-forecast" href="#forecast-section">Pronóstico Semanal</a></li>
+            <li><a id="nav-link-favorites" href="#favorites-section">⭐ Favoritos</a></li>
             <li><a id="nav-link-info" href="#climate-info">Información Climática</a></li>
             <li><a id="nav-link-contact" href="#contact-section">Contacto</a></li>
         </ul>
@@ -118,7 +119,15 @@
 
         <!-- Sección del clima actual de Puerto Montt -->
         <section id="current-weather" aria-labelledby="weather-heading">
-            <h2 id="weather-heading">Clima Actual en Puerto Montt</h2>
+            <h2 id="weather-heading">
+                Clima Actual en Puerto Montt
+                <button
+                    id="favorite-btn"
+                    class="favorite-btn"
+                    aria-label="Añadir ciudad actual a favoritos"
+                    title="Añadir a favoritos"
+                >⭐ Guardar</button>
+            </h2>
             
             <div id="weather-container">
                 <!-- Información textual del clima -->
@@ -160,6 +169,15 @@
             </div>
         </section>
 
+        <!-- ── Sección de Ciudades Favoritas ───────────────────── -->
+        <section id="favorites-section" aria-labelledby="favorites-heading">
+            <h2 id="favorites-heading">⭐ Mis Ciudades Favoritas</h2>
+            <p id="favorites-empty-msg">Aún no has guardado ninguna ciudad. ¡Busca una y presiona ⭐ Guardar!</p>
+            <div id="favorites-list" role="list" aria-label="Lista de ciudades favoritas">
+                <!-- Se genera dinámicamente desde app.js -->
+            </div>
+        </section>
+
         <!-- Sección de Pronóstico Semanal -->
         <section id="forecast-section" aria-labelledby="forecast-heading">
             <h2 id="forecast-heading">Pronóstico Semanal</h2>
@@ -193,6 +211,6 @@
     </footer>
 
     <!-- Script de lógica e interactividad -->
-    <script src="app.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
