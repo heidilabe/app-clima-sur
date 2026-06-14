@@ -75,3 +75,38 @@ Para el diseño visual premium y los recursos gráficos del clima actual, utiliz
 * **Prompt 2 (Interactividad del Buscador):** *"Crea un script en app.js que capture el texto del formulario de búsqueda y cambie dinámicamente el título y los datos de clima en la pantalla según la ciudad ingresada, mostrando alertas si no se encuentra."*
 * **Prompt 3 (Datos Locales de Puerto Montt):** *"Abre el archivo app.js y agrega 'Puerto Montt' a la base de datos local de ciudades, con sus respectivos datos de clima (temperatura, condición, humedad, viento) para que cuando la busque en el formulario no me tire error."*
 * **Prompt 4 (Pronóstico Semanal de 7 días):** *"Modifica el archivo app.js e index.html para que la sección de 'Pronóstico Semanal' muestre dinámicamente los datos de toda la semana para Puerto Montt (Lunes a Domingo con sus temperaturas y estados del cielo) usando un diseño de tarjetas."*
+* ## Prompts utilizados
+
+1. "Muéstrame la estructura actual del proyecto: qué carpetas 
+existen, qué archivos hay en cada una, y en qué ramas estamos 
+trabajando. Lista todo."
+→ Para verificar el estado inicial del proyecto
+
+2. "En el proyecto app-clima-sur, crea la carpeta /js y dentro 
+el archivo main.js. Este archivo debe contener: variables con 
+let y const, un arreglo, un objeto, funciones propias, una arrow 
+function, uso de querySelector, addEventListener, y lógica para 
+un sistema de favoritos, búsqueda dinámica y render dinámico del 
+DOM. Todo integrado con el index.html existente."
+→ Para crear la estructura base de JavaScript de la evaluación 2
+
+3. "Ejecuta git log --oneline para mostrar todos los commits 
+realizados hasta ahora"
+→ Para verificar el historial de commits del proyecto
+
+4. "Muéstrame el contenido completo de /js/main.js"
+→ Para validar que el archivo cumple los requisitos de la rúbrica
+
+5. "Ejecuta git branch -a"
+→ Para verificar que existen las 4 ramas requeridas
+
+6. "Haz checkout a la rama main, luego merge de la rama 
+desarrollo a main, resuelve cualquier conflicto y haz push 
+de todas las ramas a GitHub"
+→ Para sincronizar y publicar todos los cambios
+
+7. "Actualiza el README.md agregando descripción del proyecto, 
+estructura de carpetas con /js/main.js y validaciones realizadas. 
+Commit y push con mensaje: docs: actualizar README evaluacion 2"
+→ Para documentar el proyecto correctamente
+
